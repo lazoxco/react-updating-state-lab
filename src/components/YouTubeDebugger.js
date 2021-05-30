@@ -26,10 +26,22 @@ export default class YouTubeDebugger extends React.Component {
     })
   }
 
+  resClick = () => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        video: {
+          resolution: '720p'
+        }
+      }
+    })
+  }
+
   render(){
     return (
     <div>
       <button onClick={this.handleClick} className='bitrate'>Change Bitrate</button>
+      <button onClick={this.resClick} className='resolution'>Change Resolution</button>
     </div>
     )
   }
